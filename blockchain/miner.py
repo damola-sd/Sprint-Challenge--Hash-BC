@@ -49,7 +49,7 @@ def valid_proof(last_hash, proof):
     guess_hash = hashlib.sha256(guess).hexdigest()
 
 
-     return  last_h_hash[-6:] == guess_hash[:6]
+    return last_h_hash[-6:] == guess_hash[:6]
 
 
 if __name__ == '__main__':
@@ -62,7 +62,7 @@ if __name__ == '__main__':
     coins_mined = 0
 
     # Load or create ID
-    f = open("my_id.txt", "r")
+    f = open("blockchain\\my_id.txt", "r")
     id = f.read()
     print("ID is", id)
     f.close()
